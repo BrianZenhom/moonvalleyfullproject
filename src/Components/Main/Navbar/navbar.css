@@ -1,0 +1,290 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.navBarSection {
+  background-color: white;
+}
+.navBarSection .header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  width: 100%;
+  padding: 1rem;
+  z-index: 1000;
+}
+.navBarSection .header .logoDiv img {
+  display: none;
+}
+.navBarSection .header .logoDiv svg {
+  fill: var(--WhiteColor);
+  width: 150px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .logoDiv svg:hover {
+  transform: scale(1.1);
+}
+.navBarSection .header .activeLogo img {
+  margin-top: 0;
+  display: block;
+  width: 150px;
+  cursor: pointer;
+}
+.navBarSection .header .activeLogo img:hover {
+  transform: scale(1.1);
+}
+.navBarSection .header .activeLogo svg {
+  display: none;
+  width: 150px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.navBarSection .header .activeLogo svg:hover {
+  fill: var(--PrimaryColor);
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  .navBarSection .header .navBar {
+    background: var(--WhiteColor);
+    position: absolute;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 1rem;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+    z-index: 1000;
+  }
+  .navBarSection .header .navBar .navLists {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+  }
+  .navBarSection .header .navBar .navLists .navItem {
+    padding: 1rem 0;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--PrimaryColor);
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    transform: scale(1.1);
+    font-size: 1rem;
+    color: var(--PrimaryColor);
+    transition: 0.3s ease;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns {
+    flex-direction: column;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn {
+    margin-top: 1rem;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a {
+    font-weight: 600;
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn a:hover {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn:hover {
+    background: var(--HoverColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .btn:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn {
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn a {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover {
+    background: var(--HoverColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .loginBtn:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .ActiveLogin {
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .ActiveLogin a {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .ActiveLogin:hover {
+    background: var(--HoverColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .ActiveLogin:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .signupBtn {
+    border: 3px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .navLists .headerBtns .signupBtn:hover {
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .closeNavbar {
+    position: absolute;
+    top: 2.2rem;
+    right: 1rem;
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .closeNavbar:hover .icon {
+    color: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .activeNavbar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    left: 0;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 1rem;
+  }
+}
+.navBarSection .header .linkActive {
+  color: var(--PrimaryColor);
+  padding: 5px 0.45rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 25px;
+}
+.navBarSection .header .linkActive:hover {
+  color: white;
+  background-color: var(--PrimaryColor);
+  padding: 5px 0.45rem;
+  font-weight: 500;
+  border-radius: 25px;
+  transform: scale(1.1);
+}
+.navBarSection .header .toggleNavbar .icon {
+  font-size: 35px;
+  color: var(--WhiteColor);
+}
+.navBarSection .header .toggleNavbar .icon:hover {
+  color: var(--PrimaryColor);
+  transform: scale(1.1);
+}
+.navBarSection .header .toggleNavColor .icon {
+  font-size: 35px;
+  color: var(--PrimaryColor);
+}
+.navBarSection .header .toggleNavColor .icon:hover {
+  color: var(--PrimaryColor);
+  transform: scale(1.1);
+}
+.navBarSection .activeHeader {
+  background-color: var(--WhiteColor);
+  box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 769px) {
+  .navBarSection .toggleNavbar,
+  .navBarSection .closeNavbar {
+    display: none;
+  }
+  .navBarSection .header {
+    padding: 1.5rem 2rem;
+  }
+  .navBarSection .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink {
+    color: var(--WhiteColor);
+    padding: 2px 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 25px;
+  }
+  .navBarSection .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--PrimaryColor);
+    background-color: white;
+    padding: 5px 0.45rem;
+    font-weight: 500;
+    border-radius: 25px;
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .btn {
+    margin-left: 1rem;
+  }
+  .navBarSection .header .navBar .btn a {
+    color: var(--WhiteColor);
+    font-weight: 500;
+  }
+  .navBarSection .header .navBar .loginBtn {
+    background: none;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .loginBtn:hover {
+    background: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .loginBtn:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin {
+    background: transparent;
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin a {
+    color: var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .ActiveLogin:hover {
+    background: var(--PrimaryColor);
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .ActiveLogin:hover a {
+    color: var(--WhiteColor);
+  }
+  .navBarSection .header .navBar .activeSignup {
+    background: var(--PrimaryColor);
+    border: 1px solid transparent;
+  }
+  .navBarSection .header .navBar .activeSignup:hover {
+    transform: scale(1.1);
+  }
+  .navBarSection .header .navBar .signupBtn {
+    border: 1px solid var(--PrimaryColor);
+  }
+  .navBarSection .header .navBar .signupBtn:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 1rem 10.5rem !important;
+  }
+}/*# sourceMappingURL=navbar.css.map */

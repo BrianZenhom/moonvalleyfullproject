@@ -1,0 +1,251 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.home {
+  height: 80vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.5) 30%, rgba(33, 33, 33, 0)), url("../../../Assets/header-bg.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+}
+.home .secContainer .homeText {
+  text-align: center;
+}
+.home .secContainer .homeText .title {
+  background-image: linear-gradient(90deg, #fff 60%, hsl(212, 90%, 52%));
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+.home .secContainer .homeText .subTitle {
+  color: var(--WhiteColor);
+  opacity: 0.9;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 1rem 0;
+  max-width: 70%;
+  text-align: center;
+  margin: auto;
+}
+.home .secContainer .homeText .btn {
+  background: white;
+  padding: 0.2rem 1.5rem;
+}
+.home .secContainer .homeText .btn a {
+  color: var(--PrimaryColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.home .secContainer .homeText .btn:hover {
+  transform: scale(1.1);
+}
+.home .headerSearch {
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  gap: 1rem;
+  bottom: -21%;
+  transform: translate(-50%);
+  left: 50%;
+  justify-content: center;
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+}
+.home .headerSearch .headerSearchItems {
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-weight: 500;
+  font-size: 13px;
+  align-items: center;
+  color: var(--textColor);
+  background: var(--inputColor);
+  padding: 10px;
+  border-radius: 1.5rem;
+}
+.home .headerSearch .headerSearchItems .headerSearchText {
+  display: inline-block;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: 500;
+  color: var(--PrimaryColor);
+}
+.home .headerSearch .headerSearchItems .headerSearchText .headerIcon {
+  background: transparent;
+  font-size: 1.1rem;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.home .headerSearch .headerSearchItems .headerSearchIcon {
+  color: var(--PrimaryColor);
+  font-size: 1.1rem;
+  margin-right: 8px;
+  align-items: center;
+  display: flex;
+}
+.home .headerSearch .headerSearchItems input {
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--inputColor);
+  border: none;
+  outline: none;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems input::-moz-placeholder {
+  color: var(--PrimaryColor);
+  font-size: 13px;
+  font-weight: 500;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home .headerSearch .headerSearchItems input::placeholder {
+  color: var(--PrimaryColor);
+  font-size: 13px;
+  font-weight: 500;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.home .headerSearch .headerSearchItems input:focus {
+  outline: none;
+  color: var(--HoverColor);
+}
+.home .headerSearch .headerSearchItems span {
+  font-size: 13px;
+  font-weight: 400;
+  align-items: center;
+}
+.home .headerSearch .headerSearchItems .date {
+  position: absolute;
+  bottom: 103px;
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  border-radius: 1rem;
+}
+.home .headerSearch .headerSearchItems .options {
+  position: absolute;
+  bottom: 103px;
+  background: var(--WhiteColor);
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  border-radius: 1rem;
+  color: var(--textColor);
+}
+.home .headerSearch .headerSearchItems .options .optionItem {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter span {
+  text-align: right;
+  font-size: 15px;
+  right: 50%;
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter .optionCounterButton {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--PrimaryColor);
+  color: var(--PrimaryColor);
+  cursor: pointer;
+  border-radius: 10px;
+  background: var(--WhiteColor);
+}
+.home .headerSearch .headerSearchItems .options .optionItem .optionCounter .optionCounterButton:disabled {
+  cursor: not-allowed;
+}
+.home .headerSearch .btn {
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  color: var(--WhiteColor);
+  font-size: 13px;
+  font-weight: 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.home .headerSearch .btn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 480px) {
+  .home .secContainer .headerSearch {
+    bottom: -100px;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .home .secContainer .headerSearch .headerSearchText {
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 556px) {
+  .home .secContainer .homeText .title {
+    font-size: 2.5rem;
+  }
+  .home .secContainer .homeText .subTitle {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .secContainer .headerSearch {
+    bottom: -7%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 720px) {
+  .home .secContainer .homeText {
+    padding: 1rem 10rem;
+  }
+  .home .secContainer .homeText .title {
+    font-size: 3.5rem;
+    margin: auto;
+    line-height: 4rem;
+  }
+  .home .secContainer .homeText .subTitle {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home .secContainer .homeText .subTitle {
+    font-size: 20px;
+  }
+  .home .secContainer .headerSearch {
+    width: 75%;
+  }
+}/*# sourceMappingURL=home.css.map */

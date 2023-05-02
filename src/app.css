@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.09s ease;
+}
+
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+/* DEFAULT STYLES */
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 2rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.4rem 1.5rem;
+  background-color: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+
+.btn a {
+  color: var(--WhiteColor);
+  font-weight: 500;
+}
+
+.btn:hover a {
+  color: var(--WhiteColor);
+}
+
+.secIntro {
+  max-width: 70%;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+.secIntro .secTitle {
+  color: var(--BlackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.secIntro p {
+  font-size: 14px;
+  color: var(--textColor);
+  font-weight: 500;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+}
+
+/* Media Queries */
+@media screen and (min-width: 556px) {
+  .mainContent,
+  .singlePost {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 884px) {
+  .mainContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 75% !important;
+    margin: auto !important;
+  }
+
+  .section {
+    padding: 5rem 0 3rem;
+  }
+  .secIntro {
+    margin: 0 auto 3rem;
+  }
+  .secIntro,
+  .secTitle {
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .secIntro p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 1.7;
+  }
+}
+
+/* Page Design */
+::selection {
+  background: var(--PrimaryColor);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--greyBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--PrimaryColor);
+  border-radius: 10px;
+  cursor: pointer;
+}

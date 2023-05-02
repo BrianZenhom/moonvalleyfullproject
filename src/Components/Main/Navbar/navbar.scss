@@ -1,0 +1,346 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.navBarSection {
+  background-color: white;
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+
+    .logoDiv {
+      img {
+        display: none;
+      }
+      svg {
+        fill: var(--WhiteColor);
+        width: 150px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .activeLogo {
+      img {
+        margin-top: 0;
+        display: block;
+        width: 150px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      svg {
+        display: none;
+        width: 150px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          fill: var(--PrimaryColor);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navBar {
+        background: var(--WhiteColor);
+        position: absolute;
+        height: max-content;
+        padding: 1rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: 0.5s ease-in-out;
+        box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+        z-index: 1000;
+
+        .navLists {
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          margin: auto;
+
+          .navItem {
+            padding: 1rem 0;
+
+            .navLink {
+              color: var(--PrimaryColor);
+              font-size: 1rem;
+              font-weight: 400;
+              display: flex;
+
+              &:hover {
+                transform: scale(1.1);
+                font-size: 1rem;
+                color: var(--PrimaryColor);
+                transition: 0.3s ease;
+              }
+            }
+          }
+
+          .headerBtns {
+            flex-direction: column;
+
+            .btn {
+              margin-top: 1rem;
+
+              a {
+                font-weight: 600;
+
+                &:hover {
+                  color: var(--WhiteColor);
+                }
+              }
+
+              &:hover {
+                background: var(--HoverColor);
+
+                a {
+                  color: var(--WhiteColor);
+                }
+              }
+            }
+
+            .loginBtn {
+              background: none;
+              border: 1px solid var(--PrimaryColor);
+
+              a {
+                color: var(--PrimaryColor);
+              }
+
+              &:hover {
+                background: var(--HoverColor);
+                transform: scale(1.1);
+
+                a {
+                  color: var(--WhiteColor);
+                }
+              }
+            }
+            .ActiveLogin {
+              background: none;
+              border: 1px solid var(--PrimaryColor);
+              a {
+                color: var(--PrimaryColor);
+              }
+              &:hover {
+                background: var(--HoverColor);
+                transform: scale(1.1);
+
+                a {
+                  color: var(--WhiteColor);
+                }
+              }
+            }
+
+            .signupBtn {
+              border: 3px solid var(--PrimaryColor);
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        .closeNavbar {
+          position: absolute;
+          top: 2.2rem;
+          right: 1rem;
+          color: var(--PrimaryColor);
+
+          &:hover .icon {
+            color: var(--PrimaryColor);
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      .activeNavbar {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        left: 0;
+        transition: 0.5s ease-in-out;
+        padding-bottom: 1rem;
+      }
+    }
+    .linkActive {
+      color: var(--PrimaryColor);
+      padding: 5px 0.45rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border-radius: 25px;
+      &:hover {
+        color: white;
+        background-color: var(--PrimaryColor);
+        padding: 5px 0.45rem;
+        font-weight: 500;
+        border-radius: 25px;
+        transform: scale(1.1);
+      }
+    }
+
+    .toggleNavbar {
+      .icon {
+        font-size: 35px;
+        color: var(--WhiteColor);
+
+        &:hover {
+          color: var(--PrimaryColor);
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .toggleNavColor {
+      .icon {
+        font-size: 35px;
+        color: var(--PrimaryColor);
+
+        &:hover {
+          color: var(--PrimaryColor);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .activeHeader {
+    background-color: var(--WhiteColor);
+    box-shadow: 0 2px 8px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// MEDIA QUERIES =======>
+@media screen and (min-width: 769px) {
+  .navBarSection {
+    .toggleNavbar,
+    .closeNavbar {
+      display: none;
+    }
+    .header {
+      padding: 1.5rem 2rem;
+      .navBar {
+        .navLists {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+
+          .navItem {
+            .navLink {
+              color: var(--WhiteColor);
+              padding: 2px 0.45rem;
+              font-size: 0.9rem;
+              font-weight: 500;
+              border-radius: 25px;
+              &:hover {
+                color: var(--PrimaryColor);
+                background-color: white;
+                padding: 5px 0.45rem;
+                font-weight: 500;
+                border-radius: 25px;
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+
+        .btn {
+          margin-left: 1rem;
+
+          a {
+            color: var(--WhiteColor);
+            font-weight: 500;
+          }
+        }
+
+        .loginBtn {
+          background: none;
+          border: 1px solid var(--PrimaryColor);
+
+          &:hover {
+            background: var(--PrimaryColor);
+            transform: scale(1.1);
+            a {
+              color: var(--WhiteColor);
+            }
+          }
+        }
+
+        .ActiveLogin {
+          background: transparent;
+          border: 1px solid var(--PrimaryColor);
+          a {
+            color: var(--PrimaryColor);
+          }
+          &:hover {
+            background: var(--PrimaryColor);
+            transform: scale(1.1);
+            a {
+              color: var(--WhiteColor);
+            }
+          }
+        }
+        .activeSignup {
+          background: var(--PrimaryColor);
+          border: 1px solid transparent;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+        .signupBtn {
+          border: 1px solid var(--PrimaryColor);
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header {
+    .navBar {
+      .navLists {
+        .navItem {
+          padding: 0 0.7rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 1rem 10.5rem !important;
+  }
+}

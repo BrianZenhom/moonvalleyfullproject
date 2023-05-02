@@ -1,0 +1,38 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.about {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .secContainer .secIntro {
+  max-width: 97.5%;
+}
+.about .secContainer .secIntro .ourHistory {
+  margin: 50px auto;
+}
+.about .secContainer .secIntro .ourHistory p {
+  color: var(--BlackColor);
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+.about .secContainer .secIntro .ourHistory img {
+  width: 320px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 15px;
+}/*# sourceMappingURL=about.css.map */

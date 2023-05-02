@@ -1,0 +1,121 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.searchSection .searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.searchSection .searchContainer .searchContent {
+  margin-top: 9rem;
+  width: 100%;
+  max-width: 1024;
+  display: flex;
+  gap: 20px;
+}
+.searchSection .searchContainer .searchContent .searchBox {
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  flex: 1;
+  background-color: white;
+  padding: 15px;
+  border-radius: 25px;
+  position: sticky;
+  top: 10px;
+  height: -moz-max-content;
+  height: max-content;
+}
+.searchSection .searchContainer .searchContent .searchBox .lsOptions {
+  padding: 10px;
+}
+.searchSection .searchContainer .searchContent .searchBox .searchButton {
+  padding: 10px;
+  background-color: var(--PrimaryColor);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.searchSection .searchContainer .searchContent .searchBox .searchButton:hover {
+  transform: scale(1.1);
+}
+.searchSection .searchContainer .searchContent .searchBox .lsTitle {
+  font-size: 20px;
+  color: var(--PrimaryColor);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem label {
+  font-size: 12px;
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem input {
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  height: 30px;
+  border: none;
+  padding: 6px;
+  border-radius: 10px;
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem input::-moz-placeholder {
+  color: var(--textColor);
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem input::placeholder {
+  color: var(--textColor);
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem input:focus {
+  outline: solid 1px var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.searchSection .searchContainer .searchContent .searchBox .lsItem span {
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  height: 30px;
+  border: none;
+  padding: 6px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--textColor);
+}
+.searchSection .searchContainer .searchContent .lsItemOption .lsOptionItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--textColor);
+  font-size: 12px;
+}
+.searchSection .searchContainer .searchContent .lsItemOption .lsOptionItem .lsOptionInput {
+  width: 50px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+  padding: 5px;
+}
+.searchSection .searchContainer .searchContent .lsItemOption .lsOptionItem .lsOptionInput:focus {
+  outline: solid 1px var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.searchSection .searchContainer .searchContent .lsItemOption label {
+  font-size: 12px;
+}
+.searchSection .searchContainer .searchContent .resultBox {
+  flex: 3;
+}/*# sourceMappingURL=destinations.css.map */

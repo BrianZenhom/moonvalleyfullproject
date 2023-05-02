@@ -1,0 +1,127 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.offer {
+  .secContainer {
+    margin-top: 30px;
+    .mainContent {
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+      gap: 1rem;
+
+      .singleOffer {
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: 0.5rem;
+        box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1);
+
+        .icon {
+          font-size: 20px;
+          color: var(--textColor);
+        }
+
+        small {
+          font-weight: 500;
+          color: var(--textColor);
+        }
+
+        .destImage {
+          position: relative;
+          height: 250px;
+          width: 100%;
+          overflow: hidden;
+
+          img {
+            border-radius: 1rem;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+
+          .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: var(--PrimaryColor);
+            color: var(--WhiteColor);
+            border-radius: 3rem;
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+
+        .offerBody {
+          padding: 1rem;
+
+          .price {
+            justify-content: space-between;
+
+            h4 {
+              color: var(--BlackColor);
+              font-weight: 700;
+              font-size: 1.1rem;
+            }
+
+            .status {
+              padding: 5px 10px;
+              color: var(--HoverColor);
+              background: var(--greyBg);
+              font-size: 10px;
+              font-weight: 600;
+              border-radius: 3rem;
+            }
+          }
+
+          .amenities {
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 1rem 0;
+            gap: 0.5rem;
+
+            .singleAmenity {
+              padding: 5px 10px;
+              border-radius: 5px;
+              background: var(--greyBg);
+              gap: 0.5rem;
+            }
+          }
+
+          .btn {
+            margin-top: 1rem;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            padding: 0.6rem;
+            color: var(--WhiteColor);
+            font-weight: 600;
+            gap: 0.5rem;
+            &:hover {
+              background-color: var(--HoverColor);
+            }
+
+            .icon {
+              color: var(--WhiteColor);
+            }
+          }
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

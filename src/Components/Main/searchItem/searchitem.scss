@@ -1,0 +1,114 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  --highlightColor: hsl(39, 100%, 50%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.searchItemList {
+  border: 1px solid var(--PrimaryLight);
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  .siImg {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  .siDesc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 2;
+    .siTitle {
+      font-size: 20px;
+      color: var(--PrimaryColor);
+    }
+    .siType {
+      font-size: 12px;
+    }
+    .siAirportShuttle {
+      font-size: 12px;
+      background-color: var(--BlackColor);
+      color: white;
+      width: max-content;
+      padding: 3px;
+      border-radius: 5px;
+    }
+    .siSubtitle {
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .siFeatures {
+      font-size: 12px;
+    }
+    .siCancelOp {
+      font-size: 12px;
+      color: var(--highlightColor);
+      font-weight: 800;
+    }
+    .siCancelOpSubtitle {
+      font-size: 12px;
+      color: var(--highlightColor);
+    }
+  }
+  .siDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .siDetailsTexts {
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .siPrice {
+        font-size: 24px;
+      }
+      .siTaxOp {
+        font-size: 12px;
+        color: var(--textColor);
+      }
+      .siCheckButton {
+        background-color: var(--PrimaryColor);
+        color: white;
+        font-weight: 700;
+        padding: 10px 5px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  .siRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-weight: 500;
+    }
+    button {
+      background-color: var(--HoverColor);
+      color: white;
+      padding: 5px;
+      font-weight: 800;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+/* Colors */
+:root {
+  --PrimaryColor: hsl(209, 99%, 48%);
+  --PrimaryLight: hsl(220, 64%, 88%);
+  --HoverColor: hsl(211, 83%, 27%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(206, 73%, 9%);
+  --textColor: hsl(0, 0%, 58%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 97%);
+  /* box-shadow: 0 2px 8px 4px rgba(33, 33, 33, 0.1) */
+}
+
+.services .secContainer .title {
+  color: var(--BlackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+.services .secContainer .mainContent .singleItem {
+  text-align: center;
+}
+.services .secContainer .mainContent .singleItem img {
+  background: var(--PrimaryColor);
+  width: 250px;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.services .secContainer .mainContent .singleItem h3 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--BlackColor);
+}
+.services .secContainer .mainContent .singleItem p {
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  color: var(--textColor);
+}
+.services .secContainer .videoCard {
+  margin-top: 2rem !important;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.023), rgba(0, 0, 0, 0.609)), url(../../../Assets/bgvideo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+.services .secContainer .videoCard .cardContent {
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+.services .secContainer .videoCard .cardContent .cardText h2 {
+  color: var(--WhiteColor);
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+.services .secContainer .videoCard .cardContent .cardText p {
+  color: var(--WhiteColor);
+  opacity: 0.7;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.services .secContainer .videoCard .cardVideo {
+  border: 2px solid var(--WhiteColor);
+  height: 200px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.services .secContainer .videoCard .cardVideo video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 720px) {
+  .services .secContainer .videoCard .cardContent {
+    gap: 4rem;
+    padding: 4rem 3rem;
+  }
+  .services .secContainer .videoCard .cardContent .cardText h2 {
+    text-align: left;
+    font-size: 2rem;
+    text-shadow: 1px 2px 3px black;
+  }
+  .services .secContainer .videoCard .cardContent .cardText p {
+    opacity: 0.9;
+    font-size: 15px;
+    text-shadow: 1px 2px 3px black;
+  }
+  .services .secContainer .videoCard .cardContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .services .secContainer .mainContent {
+    padding: 2.5rem 0;
+  }
+}/*# sourceMappingURL=services.css.map */
