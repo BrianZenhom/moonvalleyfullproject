@@ -14,48 +14,25 @@ const About = () => {
           <div className="ourHistory">
             <img className="storeFront" src={imgSusi} alt="" />
             <p>
-              <strong> Moon Valley Tours </strong> had humble beginnings. It all
-              started 15 years ago when <strong> Susana Abdel Salam </strong>, a
-              passionate traveler herself, founded the company in the heart of
-              Cairo, Egypt. She had a vision of creating a travel agency that
-              would provide unique and unforgettable experiences for travelers
-              from all around the world.
+              <b>Moon Valley Tours</b> is a travel agency established in
+              <b>Istanbul in 2014</b> by an experienced owner with a vision for
+              exceptional travel experiences. Our team is highly trained to
+              provide clients with superior <b>services 24/7</b> all year round.
+              We offer a wide range of travel{' '}
+              <b>services in Turkey and worldwide</b>, including hotel
+              accommodations, airline tickets, transportation, travel insurance,
+              and corporate travel services.
             </p>
             &nbsp;
             <p>
-              Susana worked hard to establish her company in the competitive
-              travel industry. She knew that customer satisfaction was the key
-              to success, and she made it her top priority. We quickly gained a
-              reputation for providing exceptional service and personalized
-              attention to each of our clients.
-            </p>{' '}
-            &nbsp;
-            <p>
-              As the years passed, we continued to grow and expand our services.
-              The company's focus on quality and customer satisfaction paid off,
-              and it now boasts over <strong> 200.000+ </strong>
-              satisfied customers.
-            </p>
-            &nbsp;
-            <p>
-              We've become a<strong> leading travel agency </strong> , known for
-              our expertise in creating tailor-made travel packages to clients
-              looking for something special.
-            </p>
-            &nbsp;
-            <p>
-              Eventually we've moved our
-              <strong> headquarters to Turkiye,</strong> where it continues to
-              thrive. The company's new location has allowed it to expand its
-              services even further, offering clients the chance to explore new
-              destinations and discover new experiences.
-            </p>
-            &nbsp;
-            <p>
-              As CEO of MoonValleyTours, Susana remains committed to providing
-              the <strong> best possible travel experiences </strong> for her
-              clients. Her passion for travel and her dedication to customer
-              satisfaction are the driving forces behind the company's success.
+              Our mission is to satisfy our clients with the highest levels of
+              service and become one of the <b>top travel agencies in Turkey</b>
+              . We provide incoming leisure and religious trips, combined
+              packages between Turkey and Europe, airport meet and assist
+              services, and more. We also offer new services such as
+              <b>low-cost tickets</b>, apartments, villas, hostels, summer
+              camps, medical packages, international cruises, private yacht
+              packages, and visa or residence support services.
             </p>
           </div>
         </div>

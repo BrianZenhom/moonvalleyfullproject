@@ -205,7 +205,7 @@ const Navbar = type => {
             </li>
 
             <li className="navItem">
-              <a href="#" className={linkColor}>
+              <a href="#contact" className={linkColor}>
                 Contact
               </a>
             </li>
@@ -216,16 +216,16 @@ const Navbar = type => {
               </a>
             </li>
 
-            {/* <div ref={domNode} className="headerBtns flex">
+            <div ref={domNode} className="headerBtns flex">
               <button className={loginC}>
-                <a className="LoginColor" href="#">
+                <a className="LoginColor" href="/">
                   Login
                 </a>
               </button>
               <button className={signupC}>
-                <a href="#">Signup</a>
+                <a href="/">Signup</a>
               </button>
-            </div> */}
+            </div>
           </ul>
 
           <div onClick={removeNav} className="closeNavbar">
