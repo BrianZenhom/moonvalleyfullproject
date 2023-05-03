@@ -90,9 +90,6 @@ const Home = () => {
   const handleSearch = () => {
     navigate('/destinations', { state: { destination, date, options } });
   };
-  const handleNavigate = () => {
-    navigate('/destinations', {});
-  };
 
   return (
     <section className="home">
@@ -101,8 +98,8 @@ const Home = () => {
           <h1 className="title">Discover your next adventure.</h1>
           <p className="subTitle">Let us take the hassle out of planning!</p>
 
-          <button onClick={handleNavigate} className="btn">
-            <a href="#/destinations">Explore</a>
+          <button onClick={handleSearch} className="btn">
+            <a href="">Explore</a>
           </button>
         </div>
 

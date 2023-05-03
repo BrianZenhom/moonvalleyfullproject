@@ -1,7 +1,12 @@
 import './searchitem.css';
+import { useNavigate } from 'react-router-dom';
 import img1 from '../../../Assets/image (1).webp';
 
 const SearchItem = () => {
+  const navigate = useNavigate();
+  const handleSearch = () => {
+    navigate('/singledest', {});
+  };
   return (
     <div className="searchItemList">
       <img src={img1} alt="" className="siImg" />
@@ -26,7 +31,9 @@ const SearchItem = () => {
         <div className="siDetailsTexts">
           <span className="siPrice">$299</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton">Book Now</button>
+          <button onClick={handleSearch} className="siCheckButton">
+            Book Now
+          </button>
         </div>
       </div>
     </div>

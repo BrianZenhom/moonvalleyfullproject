@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './navbar.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { HiViewGrid } from 'react-icons/hi';
@@ -194,9 +193,9 @@ const Navbar = type => {
             </li>
 
             <li className="navItem">
-              <Link to="/destination" className={linkColor}>
+              <a href="/destinations" className={linkColor}>
                 Destinations
-              </Link>
+              </a>
             </li>
 
             <li className="navItem">
