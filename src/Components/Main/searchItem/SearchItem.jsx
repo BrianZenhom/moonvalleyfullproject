@@ -29,7 +29,7 @@ const SearchItem = () => {
           <button>8.9</button>
         </div>
         <div className="siDetailsTexts">
-          <span className="siPrice">$299</span>
+          <span className="siPrice">$TBD</span>
           <span className="siTaxOp">Includes taxes and fees</span>
           <button onClick={handleSearch} className="siCheckButton">
             Book Now
