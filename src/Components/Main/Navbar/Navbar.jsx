@@ -70,25 +70,25 @@ const Navbar = type => {
   };
   window.addEventListener('scroll', changeColor);
   // Change login Color on Scroll.
-  // const [loginC, setLoginC] = useState('btn loginBtn');
-  // const changeLoginColor = () => {
-  //   if (window.scrollY >= 10) {
-  //     setLoginC('btn ActiveLogin');
-  //   } else {
-  //     setLoginC('btn loginBtn');
-  //   }
-  // };
-  // window.addEventListener('scroll', changeLoginColor);
+  const [loginC, setLoginC] = useState('btn loginBtn');
+  const changeLoginColor = () => {
+    if (window.scrollY >= 10) {
+      setLoginC('btn ActiveLogin');
+    } else {
+      setLoginC('btn loginBtn');
+    }
+  };
+  window.addEventListener('scroll', changeLoginColor);
 
-  // const [signupC, setSignupC] = useState('btn signupBtn');
-  // const changeSignupColor = () => {
-  //   if (window.scrollY >= 10) {
-  //     setSignupC('btn activeSignup');
-  //   } else {
-  //     setSignupC('btn signupBtn');
-  //   }
-  // };
-  // window.addEventListener('scroll', changeSignupColor);
+  const [signupC, setSignupC] = useState('btn signupBtn');
+  const changeSignupColor = () => {
+    if (window.scrollY >= 10) {
+      setSignupC('btn activeSignup');
+    } else {
+      setSignupC('btn signupBtn');
+    }
+  };
+  window.addEventListener('scroll', changeSignupColor);
   // Change menu toggle color on scroll
   const [menuOn, setMenuOn] = useState('toggleNavbar');
   const changeMenu = () => {
@@ -184,7 +184,7 @@ const Navbar = type => {
           }
         </div>
 
-        <div ref={domNode} className={active}>
+        <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
               <a href="/" className={linkColor}>
@@ -216,7 +216,7 @@ const Navbar = type => {
               </a>
             </li>
 
-            {/* <div ref={domNode} className="headerBtns flex">
+            <div ref={domNode} className="headerBtns flex">
               <button className={loginC}>
                 <a className="LoginColor" href="/">
                   Login
@@ -225,7 +225,7 @@ const Navbar = type => {
               <button className={signupC}>
                 <a href="/">Signup</a>
               </button>
-            </div> */}
+            </div>
           </ul>
 
           <div className="closeNavbar">
