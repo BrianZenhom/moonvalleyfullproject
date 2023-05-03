@@ -15,11 +15,11 @@ const About = () => {
             <img className="storeFront" src={imgSusi} alt="" />
             <p>
               <b>Moon Valley Tours</b> is a travel agency established in
-              <b>Istanbul in 2014</b> by an experienced owner with a vision for
+              <b> Istanbul in 2014</b> by an experienced owner with a vision for
               exceptional travel experiences. Our team is highly trained to
               provide clients with superior <b>services 24/7</b> all year round.
-              We offer a wide range of travel{' '}
-              <b>services in Turkey and worldwide</b>, including hotel
+              We offer a wide range of travel
+              <b> services in Turkey and worldwide</b>, including hotel
               accommodations, airline tickets, transportation, travel insurance,
               and corporate travel services.
             </p>
@@ -30,7 +30,7 @@ const About = () => {
               . We provide incoming leisure and religious trips, combined
               packages between Turkey and Europe, airport meet and assist
               services, and more. We also offer new services such as
-              <b>low-cost tickets</b>, apartments, villas, hostels, summer
+              <b> low-cost tickets</b>, apartments, villas, hostels, summer
               camps, medical packages, international cruises, private yacht
               packages, and visa or residence support services.
             </p>

@@ -1,28 +1,29 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { HiViewGrid } from 'react-icons/hi';
 import logoImage from '../../../Assets/MoonValleyTours-Logo.png';
 // import logoGradient from '../../../Assets/MoonValleyTours-Logo.png';
 
-const useClickOutside = handler => {
-  const domNode = useRef();
+// const useClickOutside = handler => {
+//   const domNode = useRef();
 
-  useEffect(() => {
-    let maybeHandler = event => {
-      if (!domNode.current.contains(event.target)) {
-        handler();
-      }
-    };
-    document.addEventListener('mousedown', maybeHandler);
+//   useEffect(() => {
+//     let maybeHandler = event => {
+//       if (!domNode.current.contains(event.target)) {
+//         handler();
+//       }
+//     };
+//     document.addEventListener('mousedown', maybeHandler);
 
-    return () => {
-      document.removeEventListener('mousedown', maybeHandler);
-    };
-  });
+//     return () => {
+//       document.removeEventListener('mousedown', maybeHandler);
+//     };
+//   });
 
-  return domNode;
-};
+//   return domNode;
+// };
 
 const Navbar = type => {
   // Toggle ShowNav code
@@ -31,13 +32,13 @@ const Navbar = type => {
     setActive('navBar activeNavbar');
   };
   // clicking outside removes NAV code
-  const domNode = useClickOutside(() => {
-    removeNav(true);
-  });
-  // Toggle CloseNav code
-  const removeNav = () => {
-    setActive('navBar');
-  };
+  // const domNode = useClickOutside(() => {
+  //   removeNav(true);
+  // });
+  // // Toggle CloseNav code
+  // const removeNav = () => {
+  //   setActive('navBar');
+  // };
 
   // Add bg color to header
   const [transparent, setTransparent] = useState('header');
@@ -70,25 +71,25 @@ const Navbar = type => {
   };
   window.addEventListener('scroll', changeColor);
   // Change login Color on Scroll.
-  const [loginC, setLoginC] = useState('btn loginBtn');
-  const changeLoginColor = () => {
-    if (window.scrollY >= 10) {
-      setLoginC('btn ActiveLogin');
-    } else {
-      setLoginC('btn loginBtn');
-    }
-  };
-  window.addEventListener('scroll', changeLoginColor);
+  // const [loginC, setLoginC] = useState('btn loginBtn');
+  // const changeLoginColor = () => {
+  //   if (window.scrollY >= 10) {
+  //     setLoginC('btn ActiveLogin');
+  //   } else {
+  //     setLoginC('btn loginBtn');
+  //   }
+  // };
+  // window.addEventListener('scroll', changeLoginColor);
 
-  const [signupC, setSignupC] = useState('btn signupBtn');
-  const changeSignupColor = () => {
-    if (window.scrollY >= 10) {
-      setSignupC('btn activeSignup');
-    } else {
-      setSignupC('btn signupBtn');
-    }
-  };
-  window.addEventListener('scroll', changeSignupColor);
+  // const [signupC, setSignupC] = useState('btn signupBtn');
+  // const changeSignupColor = () => {
+  //   if (window.scrollY >= 10) {
+  //     setSignupC('btn activeSignup');
+  //   } else {
+  //     setSignupC('btn signupBtn');
+  //   }
+  // };
+  // window.addEventListener('scroll', changeSignupColor);
   // Change menu toggle color on scroll
   const [menuOn, setMenuOn] = useState('toggleNavbar');
   const changeMenu = () => {
@@ -193,9 +194,9 @@ const Navbar = type => {
             </li>
 
             <li className="navItem">
-              <a href="/destination" className={linkColor}>
+              <Link to="/destination" className={linkColor}>
                 Destinations
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
@@ -216,7 +217,7 @@ const Navbar = type => {
               </a>
             </li>
 
-            <div ref={domNode} className="headerBtns flex">
+            {/* <div ref={domNode} className="headerBtns flex">
               <button className={loginC}>
                 <a className="LoginColor" href="/">
                   Login
@@ -225,10 +226,10 @@ const Navbar = type => {
               <button className={signupC}>
                 <a href="/">Signup</a>
               </button>
-            </div>
+            </div> */}
           </ul>
 
-          <div onClick={removeNav} className="closeNavbar">
+          <div className="closeNavbar">
             <FaWindowClose className="icon" />
           </div>
         </div>

@@ -1,44 +1,44 @@
-import React from "react";
-import "./offer.css";
-import { MdKingBed } from "react-icons/md";
-import { MdLocalTaxi } from "react-icons/md";
-import { MdAllInclusive } from "react-icons/md";
-import { MdLocationOn } from "react-icons/md";
-import { BsArrowRightShort } from "react-icons/bs";
+import React from 'react';
+import './offer.css';
+import { MdKingBed } from 'react-icons/md';
+import { MdLocalTaxi } from 'react-icons/md';
+import { MdAllInclusive } from 'react-icons/md';
+import { MdLocationOn } from 'react-icons/md';
+import { BsArrowRightShort } from 'react-icons/bs';
 
 // Imported images
-import img1 from "../../../Assets/image (8).webp";
-import img2 from "../../../Assets/image (9).jpg";
-import img3 from "../../../Assets/image (10).jpg";
+import img1 from '../../../Assets/image (8).webp';
+import img2 from '../../../Assets/image (9).jpg';
+import img3 from '../../../Assets/image (10).jpg';
 
 // Array images
 const Offers = [
   {
     id: 1,
     imgSrc: img1,
-    destTitle: "Amalfi Coast",
-    location: "Italy",
-    price: "$2799",
-    beds: "2 Beds",
-    offerPercentage: "30% Off",
+    destTitle: 'Amalfi Coast',
+    location: 'Italy',
+    price: '$TBD-',
+    beds: '2 Beds',
+    offerPercentage: '30% Off',
   },
   {
     id: 1,
     imgSrc: img2,
-    destTitle: "Nile River",
-    location: "Cairo",
-    price: "$1699",
-    beds: "1 Bed",
-    offerPercentage: "15% Off",
+    destTitle: 'Nile River',
+    location: 'Cairo',
+    price: '$TBD-',
+    beds: '1 Bed',
+    offerPercentage: '15% Off',
   },
   {
     id: 1,
     imgSrc: img3,
-    destTitle: "Bodrum",
-    location: "Turkiye",
-    price: "$4499",
-    beds: "3 Beds",
-    offerPercentage: "10% Off",
+    destTitle: 'Bodrum',
+    location: 'Turkiye',
+    price: '$TBD-',
+    beds: '2 Beds',
+    offerPercentage: '10% Off',
   },
 ];
 

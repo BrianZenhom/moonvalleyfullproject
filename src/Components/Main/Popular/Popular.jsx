@@ -7,8 +7,15 @@ import { BsDot } from 'react-icons/bs';
 import PopularData from './PopularData';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import useFetch from '../../../hooks/useFetch';
 
 const Popular = () => {
+  const { data, loading, error } = useFetch(
+    '/destinations/countByCity?cities=istambul,madrid,london'
+  );
+
+  console.log(data, loading, error);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -38,18 +45,28 @@ const Popular = () => {
             <p>Top picks for must-visit destinations around the world!</p>
           </div>
           <div className="iconsDiv flex">
-            <button
-              aria-label="Go to next slide"
-              class="react-multiple-carousel__arrow react-multiple-carousel__arrow--right "
-              type="button"
-            ></button>
             <BsArrowLeftShort className="icon leftIcon" />
             <BsArrowRightShort className="icon rightIcon" />
           </div>
         </div>
 
         <div className="mainContent grid"></div>
-        <Carousel draggable={true} responsive={responsive}>
+        <Carousel
+          customLeftArrow={
+            <BsArrowLeftShort
+              size="lg"
+              className="icon leftIcon absolute top-1/2 left-4 max-w-4 cursor-pointer text-primary-400"
+            />
+          }
+          customRightArrow={
+            <BsArrowLeftShort
+              size="lg"
+              className="icon leftIcon absolute top-1/2 left-4 max-w-4 cursor-pointer text-primary-400"
+            />
+          }
+          draggable={true}
+          responsive={responsive}
+        >
           {PopularData.map(popularItems => {
             return (
               <div key={popularItems.id} className="singleDestination">

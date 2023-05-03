@@ -27,31 +27,31 @@ const useClickOutsideDate = handler => {
   return domNode;
 };
 
-const useClickOutsideOptions = handler => {
-  const domOp = useRef();
+// const useClickOutsideOptions = handler => {
+//   const domOp = useRef();
 
-  useEffect(() => {
-    const maybeHandler = event => {
-      if (!domOp.current.contains(event.target)) {
-        handler();
-      }
-    };
-    document.addEventListener('mousedown', maybeHandler);
+//   useEffect(() => {
+//     const maybeHandler = event => {
+//       if (!domOp.current.contains(event.target)) {
+//         handler();
+//       }
+//     };
+//     document.addEventListener('mousedown', maybeHandler);
 
-    return () => {
-      document.removeEventListener('mousedown', maybeHandler);
-    };
-  });
+//     return () => {
+//       document.removeEventListener('mousedown', maybeHandler);
+//     };
+//   });
 
-  return domOp;
-};
+//   return domOp;
+// };
 
 const Destinations = () => {
   const location = useLocation();
-  const [destination, setDestination] = useState(location.state.destination);
+  const [destination] = useState(location.state.destination);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
-  const [options, setOptions] = useState(location.state.options);
+  const [options] = useState(location.state.options);
 
   const domNode = useClickOutsideDate(() => {
     setOpenDate(false);
