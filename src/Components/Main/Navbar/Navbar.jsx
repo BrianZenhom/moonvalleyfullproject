@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './navbar.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { HiViewGrid } from 'react-icons/hi';
 import logoImage from '../../../Assets/MoonValleyTours-Logo.png';
 // import logoGradient from '../../../Assets/MoonValleyTours-Logo.png';
 
-// const useClickOutside = handler => {
-//   const domNode = useRef();
+const useClickOutside = handler => {
+  const domNode = useRef();
 
-//   useEffect(() => {
-//     let maybeHandler = event => {
-//       if (!domNode.current.contains(event.target)) {
-//         handler();
-//       }
-//     };
-//     document.addEventListener('mousedown', maybeHandler);
+  useEffect(() => {
+    let maybeHandler = event => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+    document.addEventListener('mousedown', maybeHandler);
 
-//     return () => {
-//       document.removeEventListener('mousedown', maybeHandler);
-//     };
-//   });
+    return () => {
+      document.removeEventListener('mousedown', maybeHandler);
+    };
+  });
 
-//   return domNode;
-// };
+  return domNode;
+};
 
 const Navbar = type => {
   // Toggle ShowNav code
@@ -31,13 +31,13 @@ const Navbar = type => {
     setActive('navBar activeNavbar');
   };
   // clicking outside removes NAV code
-  // const domNode = useClickOutside(() => {
-  //   removeNav(true);
-  // });
-  // // Toggle CloseNav code
-  // const removeNav = () => {
-  //   setActive('navBar');
-  // };
+  const domNode = useClickOutside(() => {
+    removeNav(true);
+  });
+  // Toggle CloseNav code
+  const removeNav = () => {
+    setActive('navBar');
+  };
 
   // Add bg color to header
   const [transparent, setTransparent] = useState('header');
@@ -184,7 +184,7 @@ const Navbar = type => {
           }
         </div>
 
-        <div className={active}>
+        <div ref={domNode} className={active}>
           <ul className="navLists flex">
             <li className="navItem">
               <a href="/" className={linkColor}>
