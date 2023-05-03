@@ -7,11 +7,11 @@ import { IoClose } from 'react-icons/io5';
 import './singledest.css';
 
 import img1 from '../../Assets/image (1).webp';
-import img2 from '../../Assets/image (2).webp';
-import img3 from '../../Assets/image (3).webp';
-import img4 from '../../Assets/image (4).webp';
+import img2 from '../../Assets/image (14).jpg';
+import img3 from '../../Assets/image (13).jpg';
+import img4 from '../../Assets/image (15).jpg';
 import img5 from '../../Assets/image (1).jpg';
-import img6 from '../../Assets/image (9).jpg';
+import img6 from '../../Assets/image (12).jpg';
 import { useState } from 'react';
 
 const SingleDest = () => {
@@ -89,7 +89,7 @@ const SingleDest = () => {
             Excellent Location According to - 2034 reviews
           </span>
           <span className="destinationPriceHighlight">
-            Book a stay over $600 at this destination and get a free tour
+            Book a stay over $TBD at this destination and get a free tour
           </span>
           <div className="destinationImages">
             {photos.map((photo, i) => (
@@ -132,7 +132,7 @@ const SingleDest = () => {
                 according to 2034 reviews.
               </span>
               <h2>
-                <b>$299</b> (3 Nights)
+                <b>$TBD</b> (3 Nights)
               </h2>
               <button>Book now!</button>
             </div>
