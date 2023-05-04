@@ -24,6 +24,9 @@
 .home .secContainer .homeText {
   text-align: center;
 }
+.home .secContainer .homeText .mainButton {
+  color: var(--PrimaryColor);
+}
 .home .secContainer .homeText .title {
   background-image: linear-gradient(90deg, #fff 20%, hsl(212, 90%, 52%));
   -webkit-background-clip: text;

@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
+import React, { useState, useRef, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Navbar from '../Main/DestNavbar/DestNavbar';
-import { useState } from 'react';
-import React, { useEffect, useRef } from 'react';
+
 import './destinations.css';
 import { format } from 'date-fns';
 import { DateRange } from 'react-date-range';
+
+import Navbar from '../Main/DestNavbar/DestNavbar';
 import SearchItem from '../Main/searchItem/SearchItem';
 
-//click outside date close
+// //click outside date close
 const useClickOutsideDate = handler => {
   const domNode = useRef();
 
@@ -27,28 +29,9 @@ const useClickOutsideDate = handler => {
   return domNode;
 };
 
-// const useClickOutsideOptions = handler => {
-//   const domOp = useRef();
-
-//   useEffect(() => {
-//     const maybeHandler = event => {
-//       if (!domOp.current.contains(event.target)) {
-//         handler();
-//       }
-//     };
-//     document.addEventListener('mousedown', maybeHandler);
-
-//     return () => {
-//       document.removeEventListener('mousedown', maybeHandler);
-//     };
-//   });
-
-//   return domOp;
-// };
-
 const Destinations = () => {
   const location = useLocation();
-  const [destination] = useState(location.state.destination);
+  const [destination, setDestination] = useState(location.state.destination);
   const [date, setDate] = useState(location.state.date);
   const [openDate, setOpenDate] = useState(false);
   const [options] = useState(location.state.options);

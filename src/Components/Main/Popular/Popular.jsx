@@ -11,8 +11,9 @@ import useFetch from '../../../hooks/useFetch';
 
 const Popular = () => {
   const { data, loading, error } = useFetch(
-    '/destinations/countByCity?cities=istambul,madrid,london'
+    'destinations/countByCity?cities=istambul,madrid,london'
   );
+  console.log(data);
 
   console.log(data, loading, error);
 

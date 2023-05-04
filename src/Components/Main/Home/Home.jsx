@@ -99,7 +99,7 @@ const Home = () => {
           <p className="subTitle">Let us take the hassle out of planning!</p>
 
           <button onClick={handleSearch} className="btn">
-            <a href="">Explore</a>
+            <h1 className="mainButton">Explore</h1>
           </button>
         </div>
 

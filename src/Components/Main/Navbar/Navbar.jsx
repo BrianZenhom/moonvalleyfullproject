@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css';
 import { FaWindowClose } from 'react-icons/fa';
 import { HiViewGrid } from 'react-icons/hi';
 import logoImage from '../../../Assets/MoonValleyTours-Logo.png';
+// import Destinations from '../../Destinations/Destinations.jsx';
 // import logoGradient from '../../../Assets/MoonValleyTours-Logo.png';
 
 const useClickOutside = handler => {
@@ -104,7 +106,9 @@ const Navbar = type => {
     <section className="navBarSection">
       <div className={transparent}>
         <div className={logoV}>
-          <img src={logoImage} alt="" />
+          <a href="/">
+            <img src={logoImage} alt="" />
+          </a>
           {
             <svg
               id="Layer_1"
@@ -187,43 +191,41 @@ const Navbar = type => {
         <div className={active}>
           <ul className="navLists flex">
             <li className="navItem">
-              <a href="/" className={linkColor}>
+              <Link to="/" className={linkColor}>
                 Home
-              </a>
+              </Link>
             </li>
-
-            <li className="navItem">
-              <a href="/destinations" className={linkColor}>
+            {/* <li className="navItem">
+              <Link to="/singledest" className={linkColor}>
                 Destinations
-              </a>
-            </li>
-
+              </Link>
+            </li> */}
             <li className="navItem">
-              <a href="#services" className={linkColor}>
+              <Link to="#services" className={linkColor}>
                 Services
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#contact" className={linkColor}>
+              <Link to="#contact" className={linkColor}>
                 Contact
-              </a>
+              </Link>
             </li>
 
             <li className="navItem">
-              <a href="#about" className={linkColor}>
+              <Link to="#about" className={linkColor}>
                 About
-              </a>
+              </Link>
             </li>
 
             <div ref={domNode} className="headerBtns flex">
               <button className={loginC}>
-                <a className="LoginColor" href="/">
+                <Link className="LoginColor" to="/">
                   Login
-                </a>
+                </Link>
               </button>
               <button className={signupC}>
-                <a href="/">Signup</a>
+                <Link to="/">Signup</Link>
               </button>
             </div>
           </ul>

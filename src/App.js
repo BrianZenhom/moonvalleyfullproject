@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import '../src/app.css';
+// import Navbar from './Components/Main/Navbar/Navbar.jsx';
 import Home from './Components/index.js';
-import Destinations from './Components/Destinations/destinations.jsx';
+import Destinations from './Components/Destinations/Destinations.jsx';
 import SingleDest from './Components/SingleDest/SingleDest.jsx';
 
 const App = () => {

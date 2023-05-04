@@ -112,8 +112,8 @@ const SingleDest = () => {
                 Welcome to the mystical and mesmerizing land of Cappadocia, a
                 destination that will leave you spellbound with its natural
                 beauty, rich history, and unique culture. Located in the heart
-                of Turkey, Cappadocia is a must-visit destination for anyone who
-                loves to explore the beauty of the world.
+                of Turkiye, Cappadocia is a must-visit destination for anyone
+                who loves to explore the beauty of the world.
               </p>
               <br />
               <p>

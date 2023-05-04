@@ -25,6 +25,9 @@
   .secContainer {
     .homeText {
       text-align: center;
+      .mainButton {
+        color: var(--PrimaryColor);
+      }
 
       .title {
         background-image: linear-gradient(90deg, #fff 20%, hsl(212, 90%, 52%));

@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+
 import './destnavbar.css';
 import logoImage from '../../../Assets/MoonValleyTours-Logo.png';
+
 import { FaWindowClose } from 'react-icons/fa';
 import { HiViewGrid } from 'react-icons/hi';
 
@@ -51,7 +54,9 @@ const DestNavbar = () => {
     <div useRef={domNode} className="navBarSectionDest">
       <div className="headerDest">
         <div className="LogoSvgDest">
-          <img src={logoImage} alt="" />
+          <Link to="/">
+            <img src={logoImage} alt="" />
+          </Link>
         </div>
 
         <div className={active}>
